@@ -227,31 +227,88 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="{{route('layout-dashboard')}}">
               <i class="menu-icon fas fa-tv"></i>
               <span class="menu-title">Dashboard</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-              <i class="menu-icon mdi mdi-content-copy"></i>
-              <span class="menu-title">Basic UI Elements</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="ui-basic">
+            <a class="nav-link" href="{{route('layout-admin')}}">
+                        <i class="menu-icon fas fa-lock"></i>
+                        <span class="menu-title">Admin</span>
+                      </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-users" aria-expanded="false" aria-controls="ui-users">
+                        <i class="menu-icon far fa-user"></i>
+                        <span class="menu-title mr-5">Users</span>
+                        <span class="ml-5 fas fa-chevron-right"></span>
+                      </a>
+            <div class="collapse" id="ui-users">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item">
-                  <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a>
+                  <a class="nav-link" href="pages/ui-features/buttons.html">All Users</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="pages/ui-features/typography.html">Typography</a>
+                  <a class="nav-link" href="pages/ui-features/typography.html">Create User</a>
                 </li>
               </ul>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/forms/basic_elements.html">
-              <i class="menu-icon mdi mdi-backup-restore"></i>
+            <a class="nav-link" data-toggle="collapse" href="#ui-posts" aria-expanded="false" aria-controls="ui-posts">
+              <i class="menu-icon far fa-clipboard"></i>
+              <span class="menu-title mr-5">Posts</span>
+              <span class="ml-5 fas fa-chevron-right"></span>
+            </a>
+            <div class="collapse" id="ui-posts">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="pages/ui-features/buttons.html">All Post</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="pages/ui-features/typography.html">Create Post</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="pages/ui-features/typography.html">All comments</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-categories" aria-expanded="false" aria-controls="ui-categories">
+                                  <i class="menu-icon far fa-bookmark"></i>
+                                  <span class="menu-title mr-3">Categories</span>
+                                  <span class="ml-5 fas fa-chevron-right"></span>
+                                </a>
+            <div class="collapse" id="ui-categories">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="pages/ui-features/buttons.html">All Categories</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-media" aria-expanded="false" aria-controls="ui-media">
+                                  <i class="menu-icon far fa-image"></i>
+                                  <span class="menu-title mr-5">Media</span>
+                                  <span class="ml-5 fas fa-chevron-right"></span>
+                                </a>
+            <div class="collapse" id="ui-media">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="pages/ui-features/buttons.html">All Media</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="pages/ui-features/typography.html">Upload Media</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('form-elements')}}">
+              <i class="menu-icon fab fa-wpforms"></i>
               <span class="menu-title">Form elements</span>
             </a>
           </li>

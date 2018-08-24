@@ -18,8 +18,14 @@ Route::get('/', function () {
 Route::get('/admin', function () {
     return view('layouts.admin');
 
-});
+})->name('layout-admin');
+
+Route::get('/dash', function () {
+    return view('layouts.dashboard');
+
+})->name('layout-dashboard');
+
 Route::get('/form', function () {
     return view('layouts.form-elements');
 
-});
+})->name('form-elements');
