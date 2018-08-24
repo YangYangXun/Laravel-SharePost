@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/admin', function () {
-    return view('layouts.admin');
+    return view('admin.index');
 
 })->name('layout-admin');
 
