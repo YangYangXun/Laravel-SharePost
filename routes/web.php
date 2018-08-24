@@ -19,3 +19,7 @@ Route::get('/admin', function () {
     return view('layouts.admin');
 
 });
+Route::get('/form', function () {
+    return view('layouts.form-elements');
+
+});

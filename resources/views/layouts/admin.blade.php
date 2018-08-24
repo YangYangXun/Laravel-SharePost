@@ -7,18 +7,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Star Admin Free Bootstrap Admin Dashboard Template</title>
   <!-- plugins:css -->
-    <link rel="stylesheet" href="{{ URL::asset('css/libs/materialdesignicons.min.css') }}">
-    <link rel="stylesheet" href="{{ URL::asset('css/libs/vendor.bundle.base.css') }}">
-    <link rel="stylesheet" href="{{ URL::asset('css/libs/vendor.bundle.addons.css') }}">
-    <!-- endinject -->
-    <!-- plugin css for this page -->
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
-    <link rel="stylesheet" href="{{ URL::asset('css/libs/style.css') }}">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <!-- endinject -->
+  <link rel="stylesheet" href="{{ URL::asset('css/libs/materialdesignicons.min.css') }}">
+  <link rel="stylesheet" href="{{ URL::asset('css/libs/vendor.bundle.base.css') }}">
+  <link rel="stylesheet" href="{{ URL::asset('css/libs/vendor.bundle.addons.css') }}">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  @yield('plugin_css_for_this_page')
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="{{ URL::asset('css/libs/style.css') }}">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
+  <!-- endinject -->
 
-    <link rel="shortcut icon" href="{{ URL::asset('theme-images/favicon.png') }}">
+  <link rel="shortcut icon" href="{{ URL::asset('theme-images/favicon.png') }}">
 
 </head>
 
@@ -79,7 +81,7 @@
               <div class="dropdown-divider"></div>
               <a class="dropdown-item preview-item">
                 <div class="preview-thumbnail">
-                   <img src="{{ URL::asset('theme-images/faces/face2.jpg') }}" alt="image" class="profile-pic">
+                  <img src="{{ URL::asset('theme-images/faces/face2.jpg') }}" alt="image" class="profile-pic">
                 </div>
                 <div class="preview-item-content flex-grow">
                   <h6 class="preview-subject ellipsis font-weight-medium text-dark">Tim Cook
@@ -93,7 +95,7 @@
               <div class="dropdown-divider"></div>
               <a class="dropdown-item preview-item">
                 <div class="preview-thumbnail">
-                     <img src="{{ URL::asset('theme-images/faces/face3.jpg') }}" alt="image" class="profile-pic">
+                  <img src="{{ URL::asset('theme-images/faces/face3.jpg') }}" alt="image" class="profile-pic">
                 </div>
                 <div class="preview-item-content flex-grow">
                   <h6 class="preview-subject ellipsis font-weight-medium text-dark"> Johnson
@@ -300,27 +302,44 @@
         </ul>
       </nav>
       <!-- partial -->
-
-
+      <div class="main-panel">
+        <div class="content-wrapper">
+          @yield('content-wrapper')
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:../../partials/_footer.html -->
+        <footer class="footer">
+          <div class="container-fluid clearfix">
+            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright ? 2018
+                        <a href="http://www.bootstrapdash.com/" target="_blank">Bootstrapdash</a>. All rights reserved.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with
+                        <i class="mdi mdi-heart text-danger"></i>
+            </span>
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
     </div>
     <!-- page-body-wrapper ends -->
   </div>
   <!-- container-scroller -->
 
   <!-- plugins:js -->
-    <script src="{{ URL::asset('js/libs/vendor.bundle.base.js') }}"></script>
-    <script src="{{ URL::asset('js/libs/vendor.bundle.addons.js') }}"></script>
-    <!-- endinject -->
-    <!-- Plugin js for this page-->
-    <!-- End plugin js for this page-->
-    <!-- inject:js -->
-    <script src="{{ URL::asset('js/libs/off-canvas.js') }}"></script>
-    <script src="{{ URL::asset('js/libs/misc.js') }}"></script>
-    <!-- endinject -->
-    <!-- Custom js for this page-->
-    <script src="{{ URL::asset('js/libs/dashboard.js') }}"></script>
+  <script src="{{ URL::asset('js/libs/vendor.bundle.base.js') }}"></script>
+  <script src="{{ URL::asset('js/libs/vendor.bundle.addons.js') }}"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  @yield('plugin_css_for_this_page')
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="{{ URL::asset('js/libs/off-canvas.js') }}"></script>
+  <script src="{{ URL::asset('js/libs/misc.js') }}"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="{{ URL::asset('js/libs/dashboard.js') }}"></script>
 
-    <!-- End custom js for this page-->
+  <!-- End custom js for this page-->
 </body>
 
 </html>
