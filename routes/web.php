@@ -29,3 +29,9 @@ Route::get('/form', function () {
     return view('layouts.form-elements');
 
 })->name('form-elements');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('admin/users', 'AdminUsersController');
