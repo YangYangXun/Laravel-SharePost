@@ -1,4 +1,4 @@
-@extends('layouts.admin') 
+@extends('layouts.admin')
 @section('content-wrapper')
 <div class="row">
     <div class="col-lg-12 grid-margin stretch-card">
@@ -63,10 +63,12 @@
                             @if (count($users) > 0) @foreach ($users as $user)
                             <tr>
                                 <td>{{$user->id}}</td>
-                                <td>{{$user->photo_id}}</td>
+                                 <td class="py-1">
+                                    <img src="{!! URL::asset($user->photo ? $user->photo->file : 'https://via.placeholder.com/400x400') !!}" alt="image" />
+                                </td>
                                 <td>{{$user->name}}</td>
                                 <td>{{$user->email}}</td>
-                                <td>{{$user->role_id}}</td>
+                                <td>{{$user->role->name}}</td>
                                 <td>{{$user->created_at}}</td>
                                 <td>{{$user->updated_at}}</td>
                             </tr>

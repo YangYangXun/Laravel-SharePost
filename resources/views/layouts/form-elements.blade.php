@@ -1,8 +1,8 @@
-@extends('layouts.admin') 
+@extends('layouts.admin')
 @section('plugin_css_for_this_page')
 <link rel="stylesheet" href="{{ URL::asset('css/libs/all.css') }}">
 @endsection
- 
+
 @section('content-wrapper')
 
 <div class="row">
