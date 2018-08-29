@@ -6,16 +6,12 @@
             <div class="card-body">
                 <h4 class="card-title">All Users</h4>
                 <p class="card-description">
-                    Add class
-                    <code>.table-striped</code>
+                     <code>Click name to rdit</code>
                 </p>
                 <div class="table-responsive">
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th>
-                                    Id
-                                </th>
                                 <th>
                                     User
                                 </th>
@@ -37,36 +33,13 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>
-                                    #1
-                                </td>
-                                <td class="py-1">
-                                    <img src="../../images/faces-clipart/pic-1.png" alt="image" />
-                                </td>
-                                <td>
-                                    Herman Beck
-                                </td>
-                                <td>
-                                    lcc@gmail.com
-                                </td>
-                                <td>
-                                    administrator
-                                </td>
-                                <td>
-                                    May 15, 2015
-                                </td>
-                                <td>
-                                    May 15, 2015
-                                </td>
-                            </tr>
                             @if (count($users) > 0) @foreach ($users as $user)
                             <tr>
-                                <td>{{$user->id}}</td>
+                                <!-- <td>{{$user->id}}</td> -->
                                  <td class="py-1">
                                     <img src="{!! URL::asset($user->photo ? $user->photo->file : 'https://via.placeholder.com/400x400') !!}" alt="image" />
                                 </td>
-                                <td>{{$user->name}}</td>
+                                <td><a href="{{route('users.edit',$user->id)}}">{{$user->name}}</a></td>
                                 <td>{{$user->email}}</td>
                                 <td>{{$user->role->name}}</td>
                                 <td>{{$user->created_at}}</td>

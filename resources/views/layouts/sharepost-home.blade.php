@@ -26,7 +26,7 @@
 
 <body>
   <div class="container-scroller">
-    <!-- partial:partials/_navbar.html -->
+        <!-- partial:partials/_navbar.html -->
     <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
         <a class="navbar-brand brand-logo" href="index.html">
@@ -38,19 +38,31 @@
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center">
         <ul class="navbar-nav navbar-nav-left header-links d-none d-md-flex">
-          <li class="nav-item">
-            <a href="#" class="nav-link">Schedule
+          <!-- <li class="nav-item">
+            <a href="#" class="nav-link">New Post
               <span class="badge badge-primary ml-1">New</span>
             </a>
+          </li> -->
+          <li class="nav-item active">
+            <a href="#" class="nav-link">
+              <i class="far fa-edit"></i>New post</a>
           </li>
           <li class="nav-item active">
+            <a href="#" class="nav-link">
+              <i class="far fa-edit"></i>Admin page</a>
+          </li>
+          <li class="nav-item active">
+            <a href="#" class="nav-link">
+              <i class="far fa-edit"></i>Category Dropdown</a>
+          </li>
+          <!-- <li class="nav-item active">
             <a href="#" class="nav-link">
               <i class="far fa-edit"></i>Reports</a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="fas fa-sort-numeric-up"></i>Score</a>
-          </li>
+          </li> -->
         </ul>
         <ul class="navbar-nav navbar-nav-right">
           <!-- <li class="nav-item dropdown">
@@ -203,9 +215,9 @@
       </div>
     </nav>
     <!-- partial -->
+
     <div class="container-fluid page-body-wrapper">
-      <!-- partial:partials/_sidebar.html -->
-      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item nav-profile">
             <div class="nav-link">
@@ -221,7 +233,7 @@
                   </div>
                 </div>
               </div>
-              <button class="btn btn-success btn-block">New Project
+              <button class="btn btn-success btn-block">New Post
                 <i class="mdi mdi-plus"></i>
               </button>
             </div>
@@ -229,19 +241,19 @@
           <li class="nav-item">
             <a class="nav-link" href="{{route('layout-dashboard')}}">
               <i class="menu-icon fas fa-tv"></i>
-              <span class="menu-title">Dashboard</span>
+              <span class="menu-title">New</span>
             </a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="{{route('layout-admin')}}">
                         <i class="menu-icon fas fa-lock"></i>
-                        <span class="menu-title">Admin</span>
+                        <span class="menu-title">Category</span>
                       </a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-users" aria-expanded="false" aria-controls="ui-users">
                         <i class="menu-icon far fa-user"></i>
-                        <span class="menu-title mr-5">Users</span>
+                        <span class="menu-title mr-5">Category</span>
                         <span class="ml-5 fas fa-chevron-right"></span>
                       </a>
             <div class="collapse" id="ui-users">
@@ -251,107 +263,6 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="{{route('users.create')}}">Create User</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#ui-posts" aria-expanded="false" aria-controls="ui-posts">
-              <i class="menu-icon far fa-clipboard"></i>
-              <span class="menu-title mr-5">Posts</span>
-              <span class="ml-5 fas fa-chevron-right"></span>
-            </a>
-            <div class="collapse" id="ui-posts">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item">
-                  <a class="nav-link" href="{{route('posts.index')}}">All Post</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{{route('posts.create')}}">Create Post</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/ui-features/typography.html">All comments</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#ui-categories" aria-expanded="false" aria-controls="ui-categories">
-                                  <i class="menu-icon far fa-bookmark"></i>
-                                  <span class="menu-title mr-3">Categories</span>
-                                  <span class="ml-5 fas fa-chevron-right"></span>
-                                </a>
-            <div class="collapse" id="ui-categories">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/ui-features/buttons.html">All Categories</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#ui-media" aria-expanded="false" aria-controls="ui-media">
-                                  <i class="menu-icon far fa-image"></i>
-                                  <span class="menu-title mr-5">Media</span>
-                                  <span class="ml-5 fas fa-chevron-right"></span>
-                                </a>
-            <div class="collapse" id="ui-media">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/ui-features/buttons.html">All Media</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/ui-features/typography.html">Upload Media</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{route('form-elements')}}">
-              <i class="menu-icon fab fa-wpforms"></i>
-              <span class="menu-title">Form elements</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/charts/chartjs.html">
-              <i class="menu-icon fas fa-chart-bar"></i>
-              <span class="menu-title">Charts</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/tables/basic-table.html">
-              <i class="menu-icon fas fa-table"></i>
-              <span class="menu-title">Tables</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/icons/font-awesome.html">
-              <i class="menu-icon fas fa-icon"></i>
-              <span class="menu-title">Icons</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-              <i class="menu-icon mdi mdi-restart"></i>
-              <span class="menu-title">User Pages</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="auth">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/samples/blank-page.html"> Blank Page </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/samples/login.html"> Login </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/samples/register.html"> Register </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/samples/error-404.html"> 404 </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/samples/error-500.html"> 500 </a>
                 </li>
               </ul>
             </div>
@@ -377,6 +288,7 @@
         <!-- partial -->
       </div>
       <!-- main-panel ends -->
+
     </div>
     <!-- page-body-wrapper ends -->
   </div>

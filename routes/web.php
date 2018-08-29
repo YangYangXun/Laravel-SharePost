@@ -35,3 +35,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('admin/users', 'AdminUsersController');
+
+Route::resource('admin/posts', 'AdminPostsController');
+
+Route::get('/post', function () {
+    return view('posts.sharepost');
+});
