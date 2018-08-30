@@ -12,7 +12,7 @@
  */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('sharepost.home');
 });
 
 Route::get('/admin', function () {
@@ -38,6 +38,4 @@ Route::resource('admin/users', 'AdminUsersController');
 
 Route::resource('admin/posts', 'AdminPostsController');
 
-Route::get('/post', function () {
-    return view('posts.sharepost');
-});
+Route::get('/post', 'PostsController@index')->name('sharepost.home');

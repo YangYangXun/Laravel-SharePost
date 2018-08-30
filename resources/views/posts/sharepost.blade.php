@@ -1,33 +1,47 @@
-@extends('layouts.sharepost-home') 
+@extends('layouts.sharepost-layout')
 @section('content-wrapper')
 <div class="row">
     <div class="col-md-12 grid-margin">
-        <div class="card">
+        @if (count($posts) > 0) @foreach ($posts as $post)
+        <div class="card mt-4">
             <div class="card-body">
-                <h4 class="card-title">Text colors</h4>
-                <p class="card-description">
-                    Use class
-                    <code>.text-primary</code>,
-                    <code>.text-secondary</code> etc. for text in theme colors
-                </p>
-                <div class="row">
-                    <div class="col-md-6">
-                        <p class="text-primary">.text-primary</p>
-                        <p class="text-success">.text-success</p>
-                        <p class="text-danger">.text-danger</p>
-                        <p class="text-warning">.text-warning</p>
-                        <p class="text-info">.text-info</p>
+                <div class="ml-5">
+                    <!-- Title -->
+                    <h1 class="display1 ">{{$post->title}}</h1>
+                    <p class="card-description ">
+                        by <img height="50px" class="rounded-circle" src="{!! URL::asset($post->user->photo->file) !!}">
+                        <a href="#">{{$post->user->name}}</a>
+                        <code>.text-primary</code>
+                        <code>.text-secondary</code> etc. for text in theme colors
+                    </p>
+
+                    <p><i class="far fa-clock "></i> {{$post->created_at}}</p>
+
+                    <div class="row mt-3">
+                        <div class="col-md-8">
+                            <img class="img-fluid" src="{!! URL::asset($post->photo->file) !!}">
+                        </div>
+                        <div class="col-md"></div>
                     </div>
-                    <div class="col-md-6">
-                        <p class="text-light bg-dark pl-1">.text-light</p>
-                        <p class="text-secondary">.text-secondary</p>
-                        <p class="text-dark">.text-dark</p>
-                        <p class="text-muted">.text-muted</p>
-                        <p class="text-white bg-dark pl-1">.text-white</p>
+                    <div class="row mt-3">
+                        <div class="col-md-8">
+                            <p class="text-primary ">{{$post->body}}</p>
+                        </div>
+                        <div class="col-md">
+                        </div>
                     </div>
                 </div>
+
+                <!-- Blog Comments -->
+
+
+
+
+                <!-- Comments Form -->
             </div>
         </div>
+        @endforeach @else @endif
+
     </div>
 </div>
 @endsection

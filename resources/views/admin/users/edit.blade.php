@@ -5,12 +5,12 @@
     <div class="row ">
         <!-- Column -->
         <div class="col-md-5 ">
-            <div class="card ">
-                <div class="card-block">
-                    <div class="d-flex flex-column justify-content-center">
-                        <img src="{!! URL::asset($user->photo ? $user->photo->file : 'https://via.placeholder.com/400x400') !!}"  width="150" />
+            <div class="card">
+                <div class="card-block p-5">
+                    <div class="text-center">
+                        <img class="img-fluid rounded-circle" src="{!! URL::asset($user->photo ? $user->photo->file : 'https://via.placeholder.com/400x400') !!}" height="100px" width="100px"   />
                         <h4 class="card-title m-t-10">{{$user->name}}</h4>
-                        <h6 class="card-subtitle ">Accoubts Manager Amix corp</h6>
+                        <h6 class="card-subtitle ">{{$user->role->name}}</h6>
                         <div class="row text-center justify-content-md-center">
                             <div class="col-4"><a href="javascript:void(0)" class="link"><i class="icon-people"></i> <font class="font-medium">254</font></a></div>
                             <div class="col-4"><a href="javascript:void(0)" class="link"><i class="icon-picture"></i> <font class="font-medium">54</font></a></div>

@@ -1,13 +1,12 @@
-@extends('layouts.app')
+@extends('layouts.sharepost-layout')
 
-@section('content')
+@section('content-wrapper')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
-
                 <div class="card-body">
+                    <h4 class="card-title">Register</h4>
                     <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
                         @csrf
 
