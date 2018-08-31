@@ -326,8 +326,10 @@ class ComposerStaticInitcc6c52a9d8350e942a6144bdfca29da6
 
     public static $classMap = array (
         'App\\Category' => __DIR__ . '/../..' . '/app/Category.php',
+        'App\\Comment' => __DIR__ . '/../..' . '/app/Comment.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\AdminPostsController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminPostsController.php',
         'App\\Http\\Controllers\\AdminUsersController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminUsersController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
@@ -335,6 +337,7 @@ class ComposerStaticInitcc6c52a9d8350e942a6144bdfca29da6
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\PostsController' => __DIR__ . '/../..' . '/app/Http/Controllers/PostsController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
@@ -342,6 +345,7 @@ class ComposerStaticInitcc6c52a9d8350e942a6144bdfca29da6
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Http\\Requests\\PostsCreateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/PostsCreateRequest.php',
         'App\\Http\\Requests\\UserEditRequest' => __DIR__ . '/../..' . '/app/Http/Requests/UserEditRequest.php',
         'App\\Http\\Requests\\UsersCreateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/UsersCreateRequest.php',
         'App\\Photo' => __DIR__ . '/../..' . '/app/Photo.php',

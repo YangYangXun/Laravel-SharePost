@@ -34,8 +34,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('admin/users', 'AdminUsersController');
-
-Route::resource('admin/posts', 'AdminPostsController');
+Route::group(['middleware' => ['auth']], function () {
+    Route::resource('admin/users', 'AdminUsersController');
+    Route::resource('admin/posts', 'AdminPostsController');
+    Route::resource('admin/comments', 'PostCommentsController');
+});
 
 Route::get('/post', 'PostsController@index')->name('sharepost.home');

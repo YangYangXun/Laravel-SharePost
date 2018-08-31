@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Http\Requests\PostsCreateRequest;
+use App\Http\Requests\PostsEditrequest;
 use App\Photo;
 use App\Post;
 use Illuminate\Http\Request;
@@ -18,8 +19,12 @@ class AdminPostsController extends Controller
      */
     public function index()
     {
-        //
-        $posts = Post::all();
+        //Admin 權限才能看到全部貼文
+        if (Auth::user()->role->name == 'administrator') {
+            $posts = Post::all();
+        } else {
+            $posts = Post::where('user_id', Auth::user()->id)->get();
+        }
         return view('admin.posts.index', compact('posts'));
     }
 
@@ -52,7 +57,7 @@ class AdminPostsController extends Controller
 
         if ($file = $request->file('photo_id')) {
             // name your upload file
-            $name = time() . $file->getFilename();
+            $name = date("Y_m_d_", time()) . $file->getClientOriginalName();
             //move file
             $file->move('images', $name);
             // Add to photo table
@@ -88,6 +93,12 @@ class AdminPostsController extends Controller
     public function edit($id)
     {
         //
+
+        $post = Post::findOrfail($id);
+        $categories = Category::pluck('name', 'id')->all();
+
+        return view('admin.posts.edit', compact('post', 'categories'));
+
     }
 
     /**
@@ -97,9 +108,26 @@ class AdminPostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(PostsEditrequest $request, $id)
     {
         //
+        $post = Post::findOrfail($id);
+        $input = $request->all();
+
+        if ($file = $request->file('photo_id')) {
+            // name your upload file
+            $name = date("Y_m_d_", time()) . $file->getClientOriginalName();
+            //move file
+            $file->move('images', $name);
+            // Add to photo table
+            $photo = Photo::create(['file' => $name]);
+            // Get the photo id from table
+            $input['photo_id'] = $photo->id;
+        }
+
+        $post->update($input);
+        return redirect('admin/posts');
+
     }
 
     /**

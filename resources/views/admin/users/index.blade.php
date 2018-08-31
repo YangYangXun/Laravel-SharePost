@@ -6,7 +6,7 @@
             <div class="card-body">
                 <h4 class="card-title">All Users</h4>
                 <p class="card-description">
-                     <code>Click name to rdit</code>
+                     <code>Click Name to Edit</code>
                 </p>
                 <div class="table-responsive">
                     <table class="table table-striped">

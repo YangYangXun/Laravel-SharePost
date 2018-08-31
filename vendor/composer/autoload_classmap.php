@@ -7,8 +7,10 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Category' => $baseDir . '/app/Category.php',
+    'App\\Comment' => $baseDir . '/app/Comment.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
+    'App\\Http\\Controllers\\AdminPostsController' => $baseDir . '/app/Http/Controllers/AdminPostsController.php',
     'App\\Http\\Controllers\\AdminUsersController' => $baseDir . '/app/Http/Controllers/AdminUsersController.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
     'App\\Http\\Controllers\\Auth\\LoginController' => $baseDir . '/app/Http/Controllers/Auth/LoginController.php',
@@ -16,6 +18,7 @@ return array(
     'App\\Http\\Controllers\\Auth\\ResetPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ResetPasswordController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
+    'App\\Http\\Controllers\\PostsController' => $baseDir . '/app/Http/Controllers/PostsController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\CheckForMaintenanceMode' => $baseDir . '/app/Http/Middleware/CheckForMaintenanceMode.php',
     'App\\Http\\Middleware\\EncryptCookies' => $baseDir . '/app/Http/Middleware/EncryptCookies.php',
@@ -23,6 +26,7 @@ return array(
     'App\\Http\\Middleware\\TrimStrings' => $baseDir . '/app/Http/Middleware/TrimStrings.php',
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
+    'App\\Http\\Requests\\PostsCreateRequest' => $baseDir . '/app/Http/Requests/PostsCreateRequest.php',
     'App\\Http\\Requests\\UserEditRequest' => $baseDir . '/app/Http/Requests/UserEditRequest.php',
     'App\\Http\\Requests\\UsersCreateRequest' => $baseDir . '/app/Http/Requests/UsersCreateRequest.php',
     'App\\Photo' => $baseDir . '/app/Photo.php',

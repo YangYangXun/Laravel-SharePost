@@ -52,7 +52,7 @@
               <i class="fas fa-sort-numeric-up"></i>Score</a>
           </li>
         </ul>
-          <ul class="navbar-nav navbar-nav-right">
+        <ul class="navbar-nav navbar-nav-right">
           <li class="nav-item dropdown  d-xl-inline-block">
             <a class="nav-link " id="UserDropdown" href="#" aria-expanded="false">
               <span class="profile-text">Hello, {{Auth::user()->name}} !</span>
@@ -69,7 +69,7 @@
                 Login Page
               </a>
               <a class="dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();" >
+                                                     document.getElementById('logout-form').submit();">
               Sign out
               <form id="logout-form" action="{{route('logout')}}" method="POST" style="display: none;">
                                         @csrf
@@ -88,7 +88,7 @@
       <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
-           <li class="nav-item nav-profile">
+          <li class="nav-item nav-profile">
             <div class="nav-link">
               <div class="user-wrapper">
                 <div class="profile-image">
@@ -119,6 +119,7 @@
                         <span class="menu-title">Admin</span>
                       </a>
           </li>
+          @if (Auth::user()->role->name == 'administrator')
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-users" aria-expanded="false" aria-controls="ui-users">
                         <i class="menu-icon far fa-user"></i>
@@ -136,6 +137,7 @@
               </ul>
             </div>
           </li>
+          @endif
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-posts" aria-expanded="false" aria-controls="ui-posts">
               <i class="menu-icon far fa-clipboard"></i>
@@ -156,7 +158,7 @@
               </ul>
             </div>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-categories" aria-expanded="false" aria-controls="ui-categories">
                                   <i class="menu-icon far fa-bookmark"></i>
                                   <span class="menu-title mr-3">Categories</span>
@@ -169,8 +171,8 @@
                 </li>
               </ul>
             </div>
-          </li>
-          <li class="nav-item">
+          </li> -->
+          <!-- <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-media" aria-expanded="false" aria-controls="ui-media">
                                   <i class="menu-icon far fa-image"></i>
                                   <span class="menu-title mr-5">Media</span>
@@ -183,6 +185,23 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="pages/ui-features/typography.html">Upload Media</a>
+                </li>
+              </ul>
+            </div>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-comment" aria-expanded="false" aria-controls="ui-comment">
+                                  <i class="menu-icon far fa-image"></i>
+                                  <span class="menu-title mr-5">Comment</span>
+                                  <span class="ml-5 fas fa-chevron-right"></span>
+                                </a>
+            <div class="collapse" id="ui-comment">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="{{route('comments.index')}}">All comment</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="pages/ui-features/typography.html">Upload comment</a>
                 </li>
               </ul>
             </div>

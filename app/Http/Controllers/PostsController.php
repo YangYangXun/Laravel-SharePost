@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Comment;
 use App\Post;
+use Illuminate\Http\Request;
 
 class PostsController extends Controller
 {
@@ -11,6 +13,13 @@ class PostsController extends Controller
     public function index()
     {
         $posts = Post::all();
-        return view('posts.sharepost', compact('posts'));
+        $comments = Comment::all();
+        return view('posts.sharepost', compact('posts', 'comments'));
     }
+
+    public function store(Request $request)
+    {
+
+    }
+
 }
