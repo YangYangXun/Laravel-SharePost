@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\UserEditRequest;
 use App\Http\Requests\UsersCreateRequest;
 use App\Photo;
+use App\Post;
 use App\Role;
 use App\User;
 use Illuminate\Http\Request;
@@ -51,7 +52,7 @@ class AdminUsersController extends Controller
 
         if ($file = $request->file('photo_id')) {
 
-            $name = date("Y_m_d_", time()) . $file->getClientOriginalName();
+            $name = time() . $file->getClientOriginalName();
             $file->move('images', $name);
             $photo = Photo::create(['file' => $name]);
             $input['photo_id'] = $photo->id;
@@ -129,8 +130,35 @@ class AdminUsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
         //
+
+        $user = User::findOrFail($id);
+        $photo = Photo::where('id', $user->photo_id);
+
+        // delete image from the directory sametime
+        unlink(public_path() . $user->photo->file);
+
+        // delete all image about users post
+        // find all post about user
+        $posts = Post::where('user_id', $user->id)->get();
+
+        foreach ($posts as $post) {
+            // delete file
+            unlink(public_path() . $post->photo->file);
+            $post_photo = Photo::where('id', $post->photo_id);
+            // delete item in database table
+            $post_photo->delete();
+        }
+
+        $user->delete();
+
+        $photo->delete();
+
+        $request->session()->flash('deleted_user', 'The user has been deleted');
+
+        return redirect('admin/users');
+
     }
 }

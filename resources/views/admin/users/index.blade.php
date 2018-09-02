@@ -1,5 +1,10 @@
 @extends('layouts.admin')
 @section('content-wrapper')
+
+@if(Session::has('deleted_user'))
+ <p>{{session('deleted_user')}}</p>
+@endif
+
 <div class="row">
     <div class="col-lg-12 grid-margin stretch-card">
         <div class="card">

@@ -51,7 +51,16 @@
                 </div>
 
                 <button type="submit" class="btn btn-success mr-2">Submit</button>
-                <button class="btn btn-light">Cancel</button> {!! Form::close() !!} @if ($errors->any())
+                <button class="btn btn-light">Cancel</button>
+                {!! Form::close() !!}
+
+                    {!! Form::open(['method' => 'delete', 'action' => ['AdminUsersController@destroy',$user->id], 'class'=>'']) !!}
+                                {{ csrf_field() }}
+
+                        <button type="submit" class="btn btn-danger ml-2">Delete</button>
+                    {!! Form::close() !!}
+
+                @if ($errors->any())
                 <div class="form-group mt-3">
                     <blockquote class="blockquote">
                         <ul>
