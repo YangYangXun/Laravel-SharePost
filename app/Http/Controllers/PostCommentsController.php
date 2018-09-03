@@ -16,7 +16,11 @@ class PostCommentsController extends Controller
     public function index()
     {
         //
-        $comments = Comment::all();
+        if (Auth::user()->role->name == 'administrator') {
+            $comments = Comment::orderBy('id', 'desc')->get();
+        } else {
+            $comments = Comment::where('user_id', Auth::user()->id)->orderBy('id', 'desc')->get();
+        }
         return view('admin.comments.index', compact('comments'));
     }
 

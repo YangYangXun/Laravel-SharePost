@@ -11,6 +11,10 @@
 <div class="row">
     <div class="col-md-1"></div>
     <div class="col-md-10 grid-margin">
+        @guest
+        <p>Click register button and join sharepost !</p>
+        @else
+        @endguest
         @if (count($posts) > 0) @foreach ($posts as $post)
         <div class="card mt-4">
             <div class="card-body">
@@ -38,7 +42,14 @@
                     </div>
                     <div class="row mt-5">
                         <div class="col-md-8">
-                            <p class="text-primary ">{{$post->body}}</p>
+                            <p class="text-dark ">{{$post->body}}</p>
+                        </div>
+                        <div class="col-md">
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-md-8">
+                            <p class="text-primary ">#{{$post->category->name}}</p>
                         </div>
                         <div class="col-md">
                         </div>

@@ -12,7 +12,7 @@ class PostsController extends Controller
 
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::orderBy('id', 'desc')->get();
         $comments = Comment::all();
         return view('posts.sharepost', compact('posts', 'comments'));
     }

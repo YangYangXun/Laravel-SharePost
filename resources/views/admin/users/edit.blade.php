@@ -54,10 +54,10 @@
                 <button class="btn btn-light">Cancel</button>
                 {!! Form::close() !!}
 
-                    {!! Form::open(['method' => 'delete', 'action' => ['AdminUsersController@destroy',$user->id], 'class'=>'']) !!}
+                    {!! Form::open(['method' => 'delete', 'action' => ['AdminUsersController@destroy',$user->id], 'class'=>['mt-3','forms-sample'] ]) !!}
                                 {{ csrf_field() }}
 
-                        <button type="submit" class="btn btn-danger ml-2">Delete</button>
+                        <button type="submit" class="btn btn-danger">Delete</button>
                     {!! Form::close() !!}
 
                 @if ($errors->any())

@@ -20,11 +20,6 @@ Route::get('/admin', function () {
 
 })->name('layout-admin');
 
-Route::get('/dash', function () {
-    return view('layouts.dashboard');
-
-})->name('layout-dashboard');
-
 Route::get('/form', function () {
     return view('layouts.form-elements');
 
@@ -38,6 +33,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('admin/users', 'AdminUsersController');
     Route::resource('admin/posts', 'AdminPostsController');
     Route::resource('admin/comments', 'PostCommentsController');
+    Route::get('admin/dash', 'AdminUsersController@dashboard')->name('layout.dashboard');
+
 });
 
 Route::get('/post', 'PostsController@index')->name('sharepost.home');

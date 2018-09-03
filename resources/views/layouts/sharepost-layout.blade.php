@@ -5,7 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Star Admin Free Bootstrap Admin Dashboard Template</title>
+  <title>SharePost</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="{{ URL::asset('css/libs/materialdesignicons.min.css') }}">
   <link rel="stylesheet" href="{{ URL::asset('css/libs/vendor.bundle.base.css') }}">
@@ -29,8 +29,9 @@
         <!-- partial:partials/_navbar.html -->
     <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
-        <a class="navbar-brand brand-logo" href="index.html">
-          <img src="{{ URL::asset('theme-images/logo.svg') }}" alt="logo" />
+         <a class="navbar-brand brand-logo" href="index.html">
+          <!-- <img src="{{ URL::asset('theme-images/logo.svg') }}" alt="logo" /> -->
+          <img class="img-fluid" src="{{ URL::asset('theme-images/share-logo.jpg') }}" alt="logo" />
         </a>
         <a class="navbar-brand brand-logo-mini" href="index.html">
           <img src="{{ URL::asset('theme-images/logo-mini.svg') }}" alt="logo" />
@@ -44,11 +45,11 @@
             </a>
           </li> -->
           <li class="nav-item active">
-            <a href="{{route('users.index')}}" class="nav-link">
+            <a href="{{route('layout.dashboard')}}" class="nav-link">
               <i class="far fa-edit"></i>Admin page</a>
           </li>
           <li class="nav-item active">
-            <a href="#" class="nav-link">
+            <a href="{{route('posts.create')}}" class="nav-link">
               <i class="far fa-edit"></i>New post</a>
           </li>
           <li class="nav-item active">
@@ -79,15 +80,15 @@
               <img class="img-xs rounded-circle" src="{!! URL::asset(Auth::user()->photo ? Auth::user()->photo->file : 'https://via.placeholder.com/400x400') !!}" alt="Profile image">
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-              <a class="dropdown-item mt-2">
+              <a class="dropdown-item mt-2" href="{{route('users.edit',Auth::user()->id)}}">
                 Manage Accounts
               </a>
-              <a class="dropdown-item">
+              <!-- <a class="dropdown-item">
                 Change Password
               </a>
               <a class="dropdown-item" href="{{route('login')}}">
                 Login Page
-              </a>
+              </a> -->
               <a class="dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();" >
                 Sign out
@@ -130,13 +131,19 @@
               </button>
             </div>
           </li>
-          @endguest
           <li class="nav-item">
-            <a class="nav-link" href="{{route('layout-dashboard')}}">
+            <a class="nav-link" href="{{route('layout.dashboard')}}">
               <i class="menu-icon fas fa-tv"></i>
-              <span class="menu-title">New</span>
+              <span class="menu-title">Only My post</span>
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('layout.dashboard')}}">
+              <i class="menu-icon fas fa-tv"></i>
+              <span class="menu-title">All post</span>
+            </a>
+          </li>
+          @endguest
           <!-- <li class="nav-item">
             <a class="nav-link" href="{{route('layout-admin')}}">
                         <i class="menu-icon fas fa-lock"></i>

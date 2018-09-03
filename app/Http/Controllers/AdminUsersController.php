@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
+use App\Comment;
 use App\Http\Requests\UserEditRequest;
 use App\Http\Requests\UsersCreateRequest;
 use App\Photo;
@@ -9,6 +11,7 @@ use App\Post;
 use App\Role;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdminUsersController extends Controller
 {
@@ -160,5 +163,20 @@ class AdminUsersController extends Controller
 
         return redirect('admin/users');
 
+    }
+
+    public function dashboard()
+    {
+
+        // $ldate = date('l Y-m-d H:i:s');
+        // return $ldate;
+
+        $data = [
+            'post' => Post::where('user_id', Auth::user()->id)->count(),
+            'comment' => Comment::where('user_id', Auth::user()->id)->count(),
+            'category' => Category::all()->count(),
+            'user' => User::all()->count(),
+        ];
+        return view('layouts.dashboard', compact('data'));
     }
 }

@@ -21,9 +21,9 @@ class AdminPostsController extends Controller
     {
         //Admin 權限才能看到全部貼文
         if (Auth::user()->role->name == 'administrator') {
-            $posts = Post::all();
+            $posts = Post::orderBy('id', 'desc')->get();
         } else {
-            $posts = Post::where('user_id', Auth::user()->id)->get();
+            $posts = Post::where('user_id', Auth::user()->id)->orderBy('id', 'desc')->get();
         }
         return view('admin.posts.index', compact('posts'));
     }
@@ -136,8 +136,20 @@ class AdminPostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
         //
+        $post = Post::findOrFail($id);
+        $photo = Photo::where('id', $post->photo_id);
+
+        unlink(public_path() . $post->photo->file);
+
+        $post->delete();
+        $photo->delete();
+
+        $request->session()->flash('deleted_post', 'The post has been deleted');
+
+        return redirect('admin/posts');
+
     }
 }

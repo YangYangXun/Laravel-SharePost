@@ -1,5 +1,10 @@
 @extends('layouts.admin')
 @section('content-wrapper')
+
+@if (Session::has('deleted_post'))
+<p>{{session('deleted_post')}}</p>
+@endif
+
 <div class="col-lg-12 grid-margin stretch-card">
   <div class="card">
     <div class="card-body">
@@ -30,10 +35,13 @@
                 Body
               </th>
               <th>
+                Time
+              </th>
+              <th>
                 Created
               </th>
               <th>
-                Updated
+                Delete
               </th>
             </tr>
           </thead>
@@ -51,8 +59,13 @@
               <td>{{$post->user->name}}</td>
               <td>{{$post->category->name}}</td>
               <td>{{str_limit($post->body,30)}}</td>
+              <td>{{$post->created_at->diffForHumans()}}</td>
               <td>{{$post->created_at}}</td>
-              <td>{{$post->updated_at}}</td>
+              <td>
+                    {!! Form::open(['method' => 'delete', 'action' => ['AdminPostsController@destroy',$post->id], 'class'=>'' ]) !!}
+                    {{ csrf_field() }}
+                    <input type="submit" value="Delete" name="delete" class="btn btn-danger"> {!! Form::close() !!}
+              </td>
 
             </tr>
             @endforeach @else
