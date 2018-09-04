@@ -46,24 +46,12 @@
           </li> -->
           <li class="nav-item active">
             <a href="{{route('layout.dashboard')}}" class="nav-link">
-              <i class="far fa-edit"></i>Admin page</a>
+              <i class="far fa-user"></i></i>Admin page</a>
           </li>
           <li class="nav-item active">
             <a href="{{route('posts.create')}}" class="nav-link">
               <i class="far fa-edit"></i>New post</a>
           </li>
-          <li class="nav-item active">
-            <a href="#" class="nav-link">
-              <i class="far fa-edit"></i>Category Dropdown</a>
-          </li>
-          <!-- <li class="nav-item active">
-            <a href="#" class="nav-link">
-              <i class="far fa-edit"></i>Reports</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fas fa-sort-numeric-up"></i>Score</a>
-          </li> -->
         </ul>
         <ul class="navbar-nav navbar-nav-right">
           @guest
@@ -158,12 +146,12 @@
                       </a>
             <div class="collapse" id="ui-users">
               <ul class="nav flex-column sub-menu">
+                <?php $categories = App\Category::all();?>
+                @foreach ($categories as $category)
                 <li class="nav-item">
-                  <a class="nav-link" href="{{route('users.index')}}">All Users</a>
+                  <a class="nav-link" href="{{route('sharepost.home.category_search',$category->id)}}">{{$category->name}}</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{{route('users.create')}}">Create User</a>
-                </li>
+                @endforeach
               </ul>
             </div>
           </li>
@@ -176,12 +164,11 @@
         </div>
         <!-- content-wrapper ends -->
         <!-- partial:../../partials/_footer.html -->
-        <footer class="footer">
+         <footer class="footer">
           <div class="container-fluid clearfix">
-            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright ? 2018
-                        <a href="http://www.bootstrapdash.com/" target="_blank">Bootstrapdash</a>. All rights reserved.</span>
-            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with
-                        <i class="mdi mdi-heart text-danger"></i>
+            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">2018
+                        <a href="" target="_blank">SharePost</a></span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">
             </span>
           </div>
         </footer>

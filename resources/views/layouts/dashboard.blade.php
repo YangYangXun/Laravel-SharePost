@@ -102,7 +102,7 @@
             <span class="weather-location">Taiwan,  TW</span>
           </p>
         </div>
-        <div class="weather-data d-flex">
+        <!-- <div class="weather-data d-flex">
           <div class="mr-auto">
             <h4 class="display-3">21
               <span class="symbol">&deg;</span>C</h4>
@@ -110,9 +110,9 @@
               Mostly Cloudy
             </p>
           </div>
-        </div>
+        </div> -->
       </div>
-      <div class="card-body p-0">
+      <!-- <div class="card-body p-0">
         <div class="d-flex weakly-weather">
           <div class="weakly-weather-item">
             <p class="mb-0">
@@ -178,7 +178,7 @@
             </p>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
     <!--weather card ends-->
   </div>

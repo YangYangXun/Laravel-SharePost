@@ -15,6 +15,9 @@
         <p>Click register button and join sharepost !</p>
         @else
         @endguest
+        @if (Session::has('category_search'))
+                        <h4 class="mt-3">{{session('category_search')}}</h4>
+        @endif
         @if (count($posts) > 0) @foreach ($posts as $post)
         <div class="card mt-4">
             <div class="card-body">
@@ -101,17 +104,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="ticket-actions col-md-2">
-                                        <div class="btn-group dropdown">
-                                            <button type="button" class="btn btn-success dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                     Manage
-                                            </button>
-                                            <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#">
-                                            <i class="fa fa-reply fa-fw"></i>Quick reply</a>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -127,7 +119,10 @@
                 <!-- Comments Form -->
             </div>
         </div>
-        @endforeach @else @endif
+        @endforeach
+        @else
+        <h3 class="text-danger">Sorry, No data!</h3>
+        @endif
 
     </div>
 </div>

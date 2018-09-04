@@ -103,21 +103,15 @@
                   </div>
                 </div>
               </div>
-              <button class="btn btn-success btn-block">New Post
+              <!-- <button class="btn btn-success btn-block">New Post
                 <i class="fas fa-plus"></i>
-              </button>
+              </button> -->
             </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{route('layout.dashboard')}}">
               <i class="menu-icon fas fa-tv"></i>
               <span class="menu-title">Dashboard</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{route('layout-admin')}}">
-                        <i class="menu-icon fas fa-lock"></i>
-                        <span class="menu-title">Admin</span>
             </a>
           </li>
           @if (Auth::user()->role->name == 'administrator')
@@ -159,7 +153,7 @@
               </ul>
             </div>
           </li>
-          <!-- <li class="nav-item">
+          <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-categories" aria-expanded="false" aria-controls="ui-categories">
                                   <i class="menu-icon far fa-bookmark"></i>
                                   <span class="menu-title mr-3">Categories</span>
@@ -168,91 +162,7 @@
             <div class="collapse" id="ui-categories">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item">
-                  <a class="nav-link" href="pages/ui-features/buttons.html">All Categories</a>
-                </li>
-              </ul>
-            </div>
-          </li> -->
-          <!-- <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#ui-media" aria-expanded="false" aria-controls="ui-media">
-                                  <i class="menu-icon far fa-image"></i>
-                                  <span class="menu-title mr-5">Media</span>
-                                  <span class="ml-5 fas fa-chevron-right"></span>
-                                </a>
-            <div class="collapse" id="ui-media">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/ui-features/buttons.html">All Media</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/ui-features/typography.html">Upload Media</a>
-                </li>
-              </ul>
-            </div>
-          </li> -->
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#ui-comment" aria-expanded="false" aria-controls="ui-comment">
-                                  <i class="menu-icon far fa-image"></i>
-                                  <span class="menu-title mr-5">Comment</span>
-                                  <span class="ml-5 fas fa-chevron-right"></span>
-                                </a>
-            <div class="collapse" id="ui-comment">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item">
-                  <a class="nav-link" href="{{route('comments.index')}}">All comment</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/ui-features/typography.html">Upload comment</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{route('form-elements')}}">
-              <i class="menu-icon fab fa-wpforms"></i>
-              <span class="menu-title">Form elements</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/charts/chartjs.html">
-              <i class="menu-icon fas fa-chart-bar"></i>
-              <span class="menu-title">Charts</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/tables/basic-table.html">
-              <i class="menu-icon fas fa-table"></i>
-              <span class="menu-title">Tables</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/icons/font-awesome.html">
-              <i class="menu-icon fas fa-icon"></i>
-              <span class="menu-title">Icons</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-              <i class="menu-icon mdi mdi-restart"></i>
-              <span class="menu-title">User Pages</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="auth">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/samples/blank-page.html"> Blank Page </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/samples/login.html"> Login </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/samples/register.html"> Register </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/samples/error-404.html"> 404 </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/samples/error-500.html"> 500 </a>
+                  <a class="nav-link" href="{{route('categories.index')}}">All Categories</a>
                 </li>
               </ul>
             </div>
@@ -268,10 +178,9 @@
         <!-- partial:../../partials/_footer.html -->
         <footer class="footer">
           <div class="container-fluid clearfix">
-            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright ? 2018
-                        <a href="http://www.bootstrapdash.com/" target="_blank">Bootstrapdash</a>. All rights reserved.</span>
-            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with
-                        <i class="mdi mdi-heart text-danger"></i>
+            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">2018
+                        <a href="" target="_blank">SharePost</a></span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">
             </span>
           </div>
         </footer>

@@ -33,8 +33,10 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('admin/users', 'AdminUsersController');
     Route::resource('admin/posts', 'AdminPostsController');
     Route::resource('admin/comments', 'PostCommentsController');
+    Route::resource('admin/categories', 'AdminCategoriesController');
     Route::get('admin/dash', 'AdminUsersController@dashboard')->name('layout.dashboard');
 
 });
 
 Route::get('/post', 'PostsController@index')->name('sharepost.home');
+Route::get('/post/category/{id}', 'PostsController@category_search')->name('sharepost.home.category_search');
