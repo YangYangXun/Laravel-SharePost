@@ -6,6 +6,7 @@ use App\Category;
 use App\Comment;
 use App\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PostsController extends Controller
 {
@@ -32,6 +33,15 @@ class PostsController extends Controller
 
         $request->session()->flash('category_search', 'Result about category : ' . $category->name);
 
+        return view('posts.sharepost', compact('posts', 'comments'));
+
+    }
+
+    public function userPost()
+    {
+        $user = Auth::user();
+        $posts = Post::where('user_id', $user->id)->orderBy('id', 'desc')->get();
+        $comments = Comment::all();
         return view('posts.sharepost', compact('posts', 'comments'));
 
     }

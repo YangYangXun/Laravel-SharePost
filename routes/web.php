@@ -27,7 +27,7 @@ Route::get('/form', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware' => ['auth']], function () {
     Route::resource('admin/users', 'AdminUsersController');
@@ -35,6 +35,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('admin/comments', 'PostCommentsController');
     Route::resource('admin/categories', 'AdminCategoriesController');
     Route::get('admin/dash', 'AdminUsersController@dashboard')->name('layout.dashboard');
+    Route::get('/post/user', 'PostsController@userPost')->name('sharepost.home.userpost');
 
 });
 

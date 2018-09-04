@@ -124,7 +124,7 @@ class AdminUsersController extends Controller
         }
 
         $user->update($input);
-        return redirect('admin/users');
+        return redirect()->back();
     }
 
     /**
@@ -141,7 +141,10 @@ class AdminUsersController extends Controller
         $photo = Photo::where('id', $user->photo_id);
 
         // delete image from the directory sametime
-        unlink(public_path() . $user->photo->file);
+        if (isset($user->photo->file)) {
+            unlink(public_path() . $user->photo->file);
+            $photo->delete();
+        }
 
         // delete all image about users post
         // find all post about user
@@ -156,8 +159,6 @@ class AdminUsersController extends Controller
         }
 
         $user->delete();
-
-        $photo->delete();
 
         $request->session()->flash('deleted_user', 'The user has been deleted');
 

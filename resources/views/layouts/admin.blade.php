@@ -29,11 +29,11 @@
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
-        <a class="navbar-brand brand-logo" href="index.html">
+        <a class="navbar-brand brand-logo" href="{{route('sharepost.home')}}">
           <!-- <img src="{{ URL::asset('theme-images/logo.svg') }}" alt="logo" /> -->
           <img class="img-fluid" src="{{ URL::asset('theme-images/share-logo.jpg') }}" alt="logo" />
         </a>
-        <a class="navbar-brand brand-logo-mini" href="index.html">
+        <a class="navbar-brand brand-logo-mini" href="{{route('sharepost.home')}}">
           <img src="{{ URL::asset('theme-images/logo-mini.svg') }}" alt="logo" />
         </a>
       </div>
@@ -47,10 +47,6 @@
           <li class="nav-item active">
             <a href="{{route('posts.create')}}" class="nav-link">
               <i class="far fa-edit"></i>New Post</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fas fa-sort-numeric-up"></i>Score</a>
           </li>
         </ul>
         <ul class="navbar-nav navbar-nav-right">

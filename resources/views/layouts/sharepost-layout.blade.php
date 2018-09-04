@@ -29,21 +29,21 @@
         <!-- partial:partials/_navbar.html -->
     <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
-         <a class="navbar-brand brand-logo" href="index.html">
+         <a class="navbar-brand brand-logo" href="{{route('sharepost.home')}}">
           <!-- <img src="{{ URL::asset('theme-images/logo.svg') }}" alt="logo" /> -->
           <img class="img-fluid" src="{{ URL::asset('theme-images/share-logo.jpg') }}" alt="logo" />
         </a>
-        <a class="navbar-brand brand-logo-mini" href="index.html">
+        <a class="navbar-brand brand-logo-mini" href="{{route('sharepost.home')}}">
           <img src="{{ URL::asset('theme-images/logo-mini.svg') }}" alt="logo" />
         </a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center">
         <ul class="navbar-nav navbar-nav-left header-links d-none d-md-flex">
-          <!-- <li class="nav-item">
-            <a href="#" class="nav-link">New Post
-              <span class="badge badge-primary ml-1">New</span>
+          <li class="nav-item">
+            <a href="{{route('sharepost.home')}}" class="nav-link">
+              <span class="badge badge-primary ml-1">SharePost</span>
             </a>
-          </li> -->
+          </li>
           <li class="nav-item active">
             <a href="{{route('layout.dashboard')}}" class="nav-link">
               <i class="far fa-user"></i></i>Admin page</a>
@@ -120,32 +120,22 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{route('layout.dashboard')}}">
-              <i class="menu-icon fas fa-tv"></i>
-              <span class="menu-title">Only My post</span>
+            <a class="nav-link" href="{{route('sharepost.home.userpost')}}">
+              <i class="menu-icon far fa-smile"></i>
+              <span class="menu-title">My post</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{route('layout.dashboard')}}">
-              <i class="menu-icon fas fa-tv"></i>
-              <span class="menu-title">All post</span>
-            </a>
-          </li>
-          @endguest
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="{{route('layout-admin')}}">
-                        <i class="menu-icon fas fa-lock"></i>
-                        <span class="menu-title">Category</span>
-                      </a>
-          </li> -->
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-users" aria-expanded="false" aria-controls="ui-users">
-                        <i class="menu-icon far fa-user"></i>
+                        <i class="menu-icon far fa-bookmark"></i>
                         <span class="menu-title mr-5">Category</span>
                         <span class="ml-5 fas fa-chevron-right"></span>
                       </a>
             <div class="collapse" id="ui-users">
               <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="{{route('sharepost.home')}}">All</a>
+                </li>
                 <?php $categories = App\Category::all();?>
                 @foreach ($categories as $category)
                 <li class="nav-item">
@@ -155,6 +145,7 @@
               </ul>
             </div>
           </li>
+          @endguest
         </ul>
       </nav>
       <!-- partial -->

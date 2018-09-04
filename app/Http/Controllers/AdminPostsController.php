@@ -70,7 +70,7 @@ class AdminPostsController extends Controller
         //Insert into posts table
         Post::create($input);
 
-        return redirect()->route('posts.index');
+        return redirect()->route('sharepost.home');
     }
 
     /**
