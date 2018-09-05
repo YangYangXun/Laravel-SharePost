@@ -1,7 +1,9 @@
 *.rb linguist-language=PHP
 * text=Laravel
 *.html linguist-language=PHP
-*.css linguist-vendored
+*.js linguist-language=PHP
+*.css linguist-language=PHP
+# *.css linguist-vendored
 *.scss linguist-vendored
-*.js linguist-vendored
+# *.js linguist-vendored
 CHANGELOG.md export-ignore
