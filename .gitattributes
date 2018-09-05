@@ -1,3 +1,4 @@
+*.rb linguist-language=PHP
 * text=Laravel
 *.css linguist-vendored
 *.scss linguist-vendored
