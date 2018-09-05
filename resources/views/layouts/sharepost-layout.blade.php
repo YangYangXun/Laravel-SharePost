@@ -108,13 +108,6 @@
                   </div>
                 </div>
               </div>
-              <button class="btn btn-success btn-block" onclick="event.preventDefault();
-                                                     document.getElementById('newpost-form').submit();">New Post
-                <i class="fas fa-plus"></i>
-                 <form id="newpost-form" action="{{route('posts.create')}}" method="POST" style="display: none;">
-                                        @csrf
-                </form>
-              </button>
             </div>
           </li>
           <li class="nav-item">

@@ -1,9 +1,6 @@
 @extends('layouts.admin')
 @section('content-wrapper')
 
-<h2>Cate Index</h2>
-
-
  <!-- Row -->
     <div class="row ">
         <!-- Column -->

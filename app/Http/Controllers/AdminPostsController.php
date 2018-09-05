@@ -57,7 +57,7 @@ class AdminPostsController extends Controller
 
         if ($file = $request->file('photo_id')) {
             // name your upload file
-            $name = date("Y_m_d_", time()) . $file->getClientOriginalName();
+            $name = date("Y_m_d_", time()) . time() . $file->getClientOriginalName();
             //move file
             $file->move('images', $name);
             // Add to photo table
@@ -116,7 +116,7 @@ class AdminPostsController extends Controller
 
         if ($file = $request->file('photo_id')) {
             // name your upload file
-            $name = date("Y_m_d_", time()) . $file->getClientOriginalName();
+            $name = date("Y_m_d_", time()) . time() . $file->getClientOriginalName();
             //move file
             $file->move('images', $name);
             // Add to photo table
