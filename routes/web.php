@@ -27,7 +27,7 @@ Route::get('/form', function () {
 
 Auth::routes();
 
-// Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware' => ['auth']], function () {
     Route::resource('admin/users', 'AdminUsersController');

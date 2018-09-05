@@ -16,9 +16,9 @@
         <table class="table table-bordered">
           <thead>
             <tr>
-              <th>
+              <!-- <th>
                 Id
-              </th>
+              </th> -->
               <th>
                 Title
               </th>
@@ -48,7 +48,7 @@
           <tbody>
             @if (count($posts) > 0) @foreach ($posts as $post)
             <tr>
-              <td>{{$post->id}}</td>
+              <!-- <td>{{$post->id}}</td> -->
               <td><a href="{{route('posts.edit',$post->id)}}">{{$post->title}}</a></td>
               <td class="py-1">
                 <div class="row justify-content-center">

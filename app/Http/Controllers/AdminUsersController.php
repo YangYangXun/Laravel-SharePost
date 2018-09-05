@@ -139,6 +139,12 @@ class AdminUsersController extends Controller
 
         $user = User::findOrFail($id);
         $photo = Photo::where('id', $user->photo_id);
+        $comments = Comment::where('user_id', $id)->get();
+
+        //delete user reply
+        foreach ($comments as $comment) {
+            $comment->delete();
+        }
 
         // delete image from the directory sametime
         if (isset($user->photo->file)) {

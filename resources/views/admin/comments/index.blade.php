@@ -12,9 +12,9 @@
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th>
+                                <!-- <th>
                                     Id
-                                </th>
+                                </th> -->
                                 <th>
                                     Post
                                 </th>
@@ -41,7 +41,7 @@
                         <tbody>
                             @if (count($comments) > 0) @foreach ($comments as $comment)
                             <tr>
-                                <td>{{$comment->id}}</td>
+                                <!-- <td>{{$comment->id}}</td> -->
                                 <td>{{$comment->post->title}}</td>
                                  <td class="py-1">
                                     <img src="{!! URL::asset($comment->user->photo ? $comment->user->photo->file : 'https://via.placeholder.com/400x400') !!}" alt="image" />

@@ -71,12 +71,6 @@
               <a class="dropdown-item mt-2" href="{{route('users.edit',Auth::user()->id)}}">
                 Manage Accounts
               </a>
-              <!-- <a class="dropdown-item">
-                Change Password
-              </a>
-              <a class="dropdown-item" href="{{route('login')}}">
-                Login Page
-              </a> -->
               <a class="dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();" >
                 Sign out
@@ -114,8 +108,12 @@
                   </div>
                 </div>
               </div>
-              <button class="btn btn-success btn-block">New Post
+              <button class="btn btn-success btn-block" onclick="event.preventDefault();
+                                                     document.getElementById('newpost-form').submit();">New Post
                 <i class="fas fa-plus"></i>
+                 <form id="newpost-form" action="{{route('posts.create')}}" method="POST" style="display: none;">
+                                        @csrf
+                </form>
               </button>
             </div>
           </li>
@@ -126,12 +124,12 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#ui-users" aria-expanded="false" aria-controls="ui-users">
+            <a class="nav-link" data-toggle="collapse" href="#ui-categroy" aria-expanded="false" aria-controls="ui-categroy">
                         <i class="menu-icon far fa-bookmark"></i>
                         <span class="menu-title mr-5">Category</span>
                         <span class="ml-5 fas fa-chevron-right"></span>
                       </a>
-            <div class="collapse" id="ui-users">
+            <div class="collapse" id="ui-categroy">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item">
                   <a class="nav-link" href="{{route('sharepost.home')}}">All</a>
