@@ -12,23 +12,6 @@
 4. Bootstrap
 5. HTML/CSS
 
-## ¨Ï¥Î»¡©ú
-
-µù¥U«á¯à°÷¨ì Manage Account ­×§ï±b¤á¸ê°T Åv­­(¹w³]¬°subscriber) ¤W¶Ç¤jÀY·Ó µ¥....
-
-
-## ¥D­n­¶­±®i¥Ü
-
-### Home Layout
-
-
-![](https://i.imgur.com/PrITsBF.png)
-
-### Admin Page
-
-
-![](https://i.imgur.com/YPnq5Oj.png)
-
 
 ## ¥D­n¥\¯à
 
@@ -37,6 +20,13 @@
 3. µo¥¬¤å³¹»P½s¿è¤å³¹
 4. ¦^ÂÐ¤å³¹
 5. Åv­­±±ºÞ admin¯à°÷ºÞ²z©Ò¦³¤å³¹»P¯d¨¥ ¤@¯ë¨Ï¥ÎŽÍ¥i¥HºÞ²z¦Û¤vªº¤å³¹»P¯d¨¥
+
+## ¨Ï¥Î»¡©ú
+
+µù¥U«á¯à°÷¨ì Manage Account ­×§ï±b¤á¸ê°T Åv­­(¹w³]¬°subscriber) ¤W¶Ç¤jÀY·Ó µ¥....
+
+
+
 
 
 

@@ -193,7 +193,7 @@
   <script src="{{ URL::asset('js/libs/vendor.bundle.addons.js') }}"></script>
   <!-- endinject -->
   <!-- Plugin js for this page-->
-  @yield('plugin_css_for_this_page')
+  @yield('plugin_js_for_this_page')
   <!-- End plugin js for this page-->
   <!-- inject:js -->
   <script src="{{ URL::asset('js/libs/off-canvas.js') }}"></script>
