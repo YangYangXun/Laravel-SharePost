@@ -1,12 +1,12 @@
 # Laravel - SharePost
 
-## ºô¯¸Â²¤¶
+## ç¶²ç«™ç°¡ä»‹
 
-§Q¥Î Laravel ©M Bootstrap Template ¹ê§@¤@­Ó¯à°÷µo§G¥Í¬¡¤å³¹ªº³¡¸¨®æ¨t²Î¡C
+åˆ©ç”¨ Laravel å’Œ Bootstrap Template å¯¦ä½œä¸€å€‹èƒ½å¤ ç™¼ä½ˆç”Ÿæ´»æ–‡ç« çš„éƒ¨è½æ ¼ç³»çµ±ã€‚
 
 [SharePost Demo](http://yangsirweb.com/SharePost/)
 
-## ¹B¥Î§Ş³N
+## é‹ç”¨æŠ€è¡“
 
 1. PHP
 2. Laravel Framework
@@ -15,66 +15,66 @@
 5. HTML/CSS
 
 
-## ¥D­n¥\¯à
+## ä¸»è¦åŠŸèƒ½
 
-1. µù¥U»Pµn¤J
-2. ­Ó¤HÀÉ®×½s¿è»P¤jÀY¶K³]©w
-3. µo¥¬¤å³¹»P½s¿è¤å³¹
-4. ¦^ÂĞ¤å³¹
-5. Åv­­±±ºŞ¡AºŞ²z­û (admin) ¯à°÷ºŞ²z©Ò¦³¤å³¹»P¯d¨¥¡A¤@¯ë¨Ï¥ÎÍ¥i¥HºŞ²z¦Û¤vªº¤å³¹»P¯d¨¥
+1. è¨»å†Šèˆ‡ç™»å…¥
+2. å€‹äººæª”æ¡ˆç·¨è¼¯èˆ‡å¤§é ­è²¼è¨­å®š
+3. ç™¼å¸ƒæ–‡ç« èˆ‡ç·¨è¼¯æ–‡ç« 
+4. å›è¦†æ–‡ç« 
+5. æ¬Šé™æ§ç®¡ï¼Œç®¡ç†å“¡ (admin) èƒ½å¤ ç®¡ç†æ‰€æœ‰æ–‡ç« èˆ‡ç•™è¨€ï¼Œä¸€èˆ¬ä½¿ç”¨è€…å¯ä»¥ç®¡ç†è‡ªå·±çš„æ–‡ç« èˆ‡ç•™è¨€
 
-## ¨Ï¥Î»¡©ú
+## ä½¿ç”¨èªªæ˜
 
-**­º­¶¹Ï¥Ü**
+**é¦–é åœ–ç¤º**
 
 ![](https://raw.githubusercontent.com/YangYangXun/ProjectImage/master/SharePost/readme/sharepost.png)
 
-**Step 1.** ÂIÀ»¥k¤W¨¤ Register «ö¶s¡A¶ñ¼g¸ê®Æ«á«ö¤U°e¥X¡C
+**Step 1.** é»æ“Šå³ä¸Šè§’ Register æŒ‰éˆ•ï¼Œå¡«å¯«è³‡æ–™å¾ŒæŒ‰ä¸‹é€å‡ºã€‚
 
 ![](https://raw.githubusercontent.com/YangYangXun/ProjectImage/master/SharePost/readme/register.png)
 
-**Step 2.** ¦¨¥\µù¥U«á·|¥ß§Y¸õÂà¨ì«á¥x Dashboard ­¶­±¡C
+**Step 2.** æˆåŠŸè¨»å†Šå¾Œæœƒç«‹å³è·³è½‰åˆ°å¾Œå° Dashboard é é¢ã€‚
 
-*Dashboard ¤¶²Ğ*
-* ¤W¤è¥\¯à¦C¥Ñ¥ª¦Ü¥k¬°¦^¨ì¶K¤å¥D­¶­±¡B·s¼W¶K¤å¡B¤jÀY¶KÅã¥Ü¡B¤U©Ô¿ï³æ¡]¤º§t±b¸¹³]©w¡Bµn¥X¡^
-* ¥ª¤è¥\¯à¦C¯à°÷½s¿èºŞ²z¶K¤å¡B¬d¬İ¶K¤å¯d¨¥¡A­YÅv­­¬°ºŞ²z­û«h¯à°÷¬d¬İ»PºŞ²z©Ò¦³¨Ï¥ÎÍ¶K¤å¡C
+*Dashboard ä»‹ç´¹*
+* ä¸Šæ–¹åŠŸèƒ½åˆ—ç”±å·¦è‡³å³ç‚ºå›åˆ°è²¼æ–‡ä¸»é é¢ã€æ–°å¢è²¼æ–‡ã€å¤§é ­è²¼é¡¯ç¤ºã€ä¸‹æ‹‰é¸å–®ï¼ˆå…§å«å¸³è™Ÿè¨­å®šã€ç™»å‡ºï¼‰
+* å·¦æ–¹åŠŸèƒ½åˆ—èƒ½å¤ ç·¨è¼¯ç®¡ç†è²¼æ–‡ã€æŸ¥çœ‹è²¼æ–‡ç•™è¨€ï¼Œè‹¥æ¬Šé™ç‚ºç®¡ç†å“¡å‰‡èƒ½å¤ æŸ¥çœ‹èˆ‡ç®¡ç†æ‰€æœ‰ä½¿ç”¨è€…è²¼æ–‡ã€‚
 
 
 ![](https://raw.githubusercontent.com/YangYangXun/ProjectImage/master/SharePost/readme/dashboard.png)
 
 
-**Step 3.** ÂIÀ»¥k¤W¨¤¤U©Ô¿ï³æ¡A¿ï¾Ü Manage Account ¯à°÷¨ì³]©w­¶­±³]©w¤jÀY¶K¡B¨Ï¥ÎÍ¨¤¦âµ¥±b¤á¸ê°T¡C
+**Step 3.** é»æ“Šå³ä¸Šè§’ä¸‹æ‹‰é¸å–®ï¼Œé¸æ“‡ Manage Account èƒ½å¤ åˆ°è¨­å®šé é¢è¨­å®šå¤§é ­è²¼ã€ä½¿ç”¨è€…è§’è‰²ç­‰å¸³æˆ¶è³‡è¨Šã€‚
 
-* ¹Ï¬°¤W¶Ç¤jÀY¶K«á¡A¤jÀY¶K´ú¸Õ¥i°Ñ¦Ò[¤jÀY¶K¹Ï¤ù](https://github.com/YangYangXun/ProjectImage/tree/master/SharePost/faces)
+* åœ–ç‚ºä¸Šå‚³å¤§é ­è²¼å¾Œï¼Œå¤§é ­è²¼æ¸¬è©¦å¯åƒè€ƒ[å¤§é ­è²¼åœ–ç‰‡](https://github.com/YangYangXun/ProjectImage/tree/master/SharePost/faces)
 
 ![](https://raw.githubusercontent.com/YangYangXun/ProjectImage/master/SharePost/readme/profile.png)
 
-**Step 4.** ÂIÀ»¥\¯à¦C New Post ¯à°÷·s¼W¶K¤å¡C
+**Step 4.** é»æ“ŠåŠŸèƒ½åˆ— New Post èƒ½å¤ æ–°å¢è²¼æ–‡ã€‚
 
 ![](https://raw.githubusercontent.com/YangYangXun/ProjectImage/master/SharePost/readme/create-post.png)
 
-**Step 5.** µo¤å«á¸õÂà¨ì­º­¶¯à°÷¬İ¨ì­è­èµo§Gªº¤å³¹¡C
+**Step 5.** ç™¼æ–‡å¾Œè·³è½‰åˆ°é¦–é èƒ½å¤ çœ‹åˆ°å‰›å‰›ç™¼ä½ˆçš„æ–‡ç« ã€‚
 
 ![](https://raw.githubusercontent.com/YangYangXun/ProjectImage/master/SharePost/readme/newpost-at-home.png)
 
-**Step 6.** ¯à°÷¦^ÂĞ¦Û¤v»P§O¤Hªº¤å³¹¡C
+**Step 6.** èƒ½å¤ å›è¦†è‡ªå·±èˆ‡åˆ¥äººçš„æ–‡ç« ã€‚
 
 ![](https://raw.githubusercontent.com/YangYangXun/ProjectImage/master/SharePost/readme/reply.png)
 
 
-**ºŞ²z­ûÅv­­**  ºŞ²z­û¯à°÷¬İ¨ì©Ò¦³¨Ï¥ÎÍ¡B©Ò¦³¶K¤å¡C
+**ç®¡ç†å“¡æ¬Šé™**  ç®¡ç†å“¡èƒ½å¤ çœ‹åˆ°æ‰€æœ‰ä½¿ç”¨è€…ã€æ‰€æœ‰è²¼æ–‡ã€‚
 
-* ¬d¬İ©Ò¦³¨Ï¥ÎÍ
+* æŸ¥çœ‹æ‰€æœ‰ä½¿ç”¨è€…
 
 ![](https://raw.githubusercontent.com/YangYangXun/ProjectImage/master/SharePost/readme/admin-user.png)
 
-* ¬d¬İ©Ò¦³¶K¤å
+* æŸ¥çœ‹æ‰€æœ‰è²¼æ–‡
  
  ![](https://raw.githubusercontent.com/YangYangXun/ProjectImage/master/SharePost/readme/admin-post.png)
  
  
  
- ## °Ñ¦Ò¸ê®Æ
+ ## åƒè€ƒè³‡æ–™
  
  
  [StarAdmin-Template](https://github.com/BootstrapDash/StarAdmin-Free-Bootstrap-Admin-Template)
